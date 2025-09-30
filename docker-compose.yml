@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  resume-parser:
+    build: .
+    container_name: resume-parser
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
